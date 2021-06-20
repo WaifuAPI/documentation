@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "airi_docs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serve -s docs-dist",
+    "dev": "dumi dev",
+    "build": "dumi build",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "dumi": "^1.0.14",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.1",
+    "serve": "^12.0.0",
+    "yorkie": "^2.0.0"
+  }
+}
