@@ -1,7 +1,10 @@
 {
   "private": true,
   "name": "airi_docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "Documentatin for a API Serving Anime stuff",
+  "author": "Kyoyo",
+  "license": "AGPLv3",
   "scripts": {
     "start": "serve -s docs-dist",
     "dev": "dumi dev",
