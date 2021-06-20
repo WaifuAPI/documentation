@@ -6,7 +6,7 @@
   "author": "Kyoyo",
   "license": "AGPLv3",
   "scripts": {
-    "start": "serve -s docs-dist",
+    "start": "node app.js",
     "dev": "dumi dev",
     "build": "dumi build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
@@ -26,13 +26,13 @@
     ]
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.12.0"
   },
   "devDependencies": {
     "dumi": "^1.0.14",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
-    "serve": "^12.0.0",
     "yorkie": "^2.0.0"
   }
 }
