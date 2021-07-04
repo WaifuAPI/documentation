@@ -6,7 +6,6 @@
   "author": "Kyoyo",
   "license": "AGPLv3",
   "scripts": {
-    "start": "node app.js",
     "dev": "dumi dev",
     "build": "dumi build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
