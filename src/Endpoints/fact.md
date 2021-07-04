@@ -1,4 +1,4 @@
-## Anime Fact
+## Fact
 
 ### Generate random Anime facts
 
