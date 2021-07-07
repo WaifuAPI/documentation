@@ -18,6 +18,6 @@ GET /quote
   // The anime name of the quote
   anime: string;
   // The person who said the quote
-  name: string;
+  said: string;
 }
 ```
