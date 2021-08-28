@@ -5,7 +5,7 @@ Returns a single random waifu from the database
 #### Path
 
 ```HTTP
-GET /waifus
+GET /waifu
 ```
 
 #### Response
