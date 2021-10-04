@@ -54,25 +54,3 @@ Random fact with tags "AttackonTitan" **`OR`** "Levi" [try in browser](https://a
 ```HTTP
 GET /fact?tags=AttackonTitan|Levi
 ```
-
-### Get fact By ID
-
-Get a fact by its ID
-
-#### Path
-
-```HTTP
-GET /facts/:id
-```
-
-#### Response
-
-```ts
-{
-  _id: string
-  // The quotation text
-  fact: string
-  // An array of tag names for this fact
-  tags: string[]
-}
-```
