@@ -2,7 +2,7 @@
 
 ### Airi API
 
-- Version: `1.5.6`
+- Version: `1.1.6`
 - Base URL: `https://airi.kyoyo.me/api/:endpoint`
 - Protocols: `https`
 - Responds With: `application/json`
