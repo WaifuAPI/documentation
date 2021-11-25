@@ -34,7 +34,7 @@ To get your API token, join this [discord server](https://discord.gg/yyW389c), t
 **How can I support the project?**
 
 - Contribute to the [API](https://github.com/AiriAPI/Airi)
-- Donate me via [Ko-fi](https://ko-fi.com/aetrnyx)
+- Donate me via [Ko-fi](https://ko-fi.com/Aeryk)
 - Give feedback or suggestions in [discord server](https://discord.gg/yyW389c).
 
 **Support for API**
