@@ -1,4 +1,4 @@
-# Contributing to Airi
+# Contributing to Animu
 
 We love your input! We want to make contributing to this project as easy as possible, whether it's:
 
@@ -22,5 +22,5 @@ Great Feature Requests tend to have:
 
 ## License
 
-By contributing to Airi Documentation, you agree that your contributions will be licensed
+By contributing to Animu Documentation, you agree that your contributions will be licensed
 under the [LICENSE file](LICENSE.md).

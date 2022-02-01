@@ -1,4 +1,4 @@
-# Airi Documentation
+# Animu Documentation
 
 ## Getting Started
 

@@ -1,9 +1,9 @@
 ## Introduction
 
-### Airi API
+### Animu API
 
 - Version: `1.3.8`
-- Base URL: `https://airi.kyoyo.me/api/:endpoint`
+- Base URL: `https://animu.ml/api/:endpoint`
 - Protocols: `https`
 - Responds With: `application/json`
 
@@ -33,7 +33,7 @@ To get your API token, join this [discord server](https://discord.gg/yyW389c), t
 
 **How can I support the project?**
 
-- Contribute to the [API](https://github.com/AiriAPI/Airi)
+- Contribute to the [API](https://github.com/AnimuAPI/Animu)
 - Donate me via [Ko-fi](https://ko-fi.com/Aeryk)
 - Give feedback or suggestions in [discord server](https://discord.gg/yyW389c).
 

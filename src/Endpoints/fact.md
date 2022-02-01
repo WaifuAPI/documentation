@@ -37,19 +37,19 @@ GET /fact
 
 #### Examples
 
-Random fact [try in browser](https://airi.kyoyo.me/api/fact)
+Random fact [try in browser](https://animu.ml/api/fact)
 
 ```HTTP
 GET /fact
 ```
 
-Random fact with tags "pokemon" **`AND`** "pikachu" [try in browser](https://airi.kyoyo.me/api/fact?tags=pokemon,pikachu)
+Random fact with tags "pokemon" **`AND`** "pikachu" [try in browser](https://animu.ml/api/fact?tags=pokemon,pikachu)
 
 ```HTTP
 GET /fact?tags=pokemon,pikachu
 ```
 
-Random fact with tags "AttackonTitan" **`OR`** "Levi" [try in browser](https://airi.kyoyo.me/api/fact?tags=AttackonTitan|Levi)
+Random fact with tags "AttackonTitan" **`OR`** "Levi" [try in browser](https://animu.ml/api/fact?tags=AttackonTitan|Levi)
 
 ```HTTP
 GET /fact?tags=AttackonTitan|Levi
