@@ -2,4 +2,4 @@
 
 ---
 
-- `pip install airi.py` [package link](https://pypi.org/project/airi.py/) _**works for all endpoints**_
+- `pip install animu` [package link](https://pypi.org/project/animu/) _**works for all endpoints**_
