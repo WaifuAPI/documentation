@@ -8,6 +8,11 @@ Generates a random password
 GET /password
 ```
 
+#### Headers
+
+> - Set your API Key as the `Auth` header on every request.
+> - Example: `Auth`: token
+
 #### Response
 
 ```ts

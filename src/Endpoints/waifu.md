@@ -8,6 +8,11 @@ Returns a single random waifu from the database
 GET /waifu
 ```
 
+#### Headers
+
+> - Set your API Key as the `Auth` header on every request.
+> - Example: `Auth`: token
+
 #### Response
 
 ```ts

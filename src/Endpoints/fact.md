@@ -10,7 +10,7 @@ Returns a single random fact from the database
 GET /fact
 ```
 
-### Headers:
+#### Headers
 
 > - Set your API Key as the `Auth` header on every request.
 > - Example: `Auth`: token
