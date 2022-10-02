@@ -1,4 +1,4 @@
-### Gifs
+### Gif
 
 Returns a random anime gif
 
