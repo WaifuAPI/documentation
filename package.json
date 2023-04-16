@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "animu_docs",
-  "version": "1.6.10",
+  "name": "waifu.it_docs",
+  "version": "1.7.10",
   "description": "Documentatin for a API Serving Anime stuff",
-  "author": "Kyoyo",
+  "author": "Aeryk",
   "license": "AGPLv3",
   "scripts": {
     "dev": "dumi dev",
