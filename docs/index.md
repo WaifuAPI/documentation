@@ -2,8 +2,8 @@
 
 ### Animu API
 
-- Version: `1.3.8`
-- Base URL: `https://animu.ml/api/:endpoint`
+- Version: `2.4.8`
+- Base URL: `https://waifu.it/api/:endpoint`
 - Protocols: `https`
 - Responds With: `application/json`
 
@@ -33,7 +33,7 @@ To get your API token, join this [discord server](https://discord.gg/yyW389c), t
 
 **How can I support the project?**
 
-- Contribute to the [API](https://github.com/AnimuAPI/Animu)
+- Contribute to the [API](https://github.com/WaifuAPI/Waifu.it)
 - Donate me via [Ko-fi](https://ko-fi.com/Aeryk)
 - Give feedback or suggestions in [discord server](https://discord.gg/yyW389c).
 
