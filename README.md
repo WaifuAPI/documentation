@@ -1,59 +1,23 @@
-# Animu Documentation
+# Nextra Docs Template 
 
-## Getting Started
+This is a template for creating documentation with [Nextra](https://nextra.site).
 
-Install dependencies,
+[**Live Demo →**](https://nextra-docs-template.vercel.app)
 
-```bash
-$ npm i
-```
+[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
 
-Start the dev server,
+## Quick Start
 
-```bash
-$ npm run dev
-```
+Click the button to clone this repository and deploy it on Vercel:
 
-Build documentation,
+[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
 
-```bash
-$ npm run build
-```
+## Local Development
 
-# Contributing
+First, run `pnpm i` to install the dependencies.
 
-All contributions are greatly appreciated, but I recommend creating an issue or replying in a comment to let me know what you are working on first that way we don't overwrite each other.
+Then, run `pnpm dev` to start the development server and visit localhost:3000.
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on this project.
+## License
 
-## Issues
-
-- Feature requests/enhancements
-- Bug reports
-- Questions/feedback
-
-## Branches
-
-- production -> don't touch, this is what's running in production
-
-- staging -> [pull request][pr] this branch for everything
-
-## Pull Requests
-
-All pull requests are welcome!
-
-- [Fork][fork] the repository on GitHub.
-
-- [Clone][cloning] the forked repo to your local machine.
-
-- Do you changes
-
-- Commit your changes
-
-- Push your changes back up to your fork.
-
-- When you're ready, submit a [pull request][pr] so that we can review your changes.
-
-[fork]: https://help.github.com/en/articles/fork-a-repo
-[cloning]: https://help.github.com/en/articles/cloning-a-repository
-[pr]: https://help.github.com/en/articles/about-pull-requests
+This project is licensed under the MIT License.

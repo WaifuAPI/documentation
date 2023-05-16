@@ -1,0 +1,5 @@
+{
+  "start": "Get Started",
+  "Javascript": { "title": "Javascript", "theme": { "collapsed": true } },
+  "Python": { "title": "Python", "theme": { "collapsed": true } }
+}

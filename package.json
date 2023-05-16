@@ -1,36 +1,30 @@
 {
-  "private": true,
-  "name": "waifu.it_docs",
-  "version": "1.7.10",
-  "description": "Documentatin for a API Serving Anime stuff",
-  "author": "Aeryk",
-  "license": "AGPLv3",
+  "name": "docs.waifu.it",
+  "version": "0.0.1-alpha",
+  "description": "The new and improved documentation for Waifu.it",
   "scripts": {
-    "dev": "dumi dev",
-    "build": "dumi build",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaifuAPI/docs.waifu.it.git"
   },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WaifuAPI/docs.waifu.it/issues"
   },
+  "homepage": "https://github.com/WaifuAPI/docs.waifu.it/#readme",
   "dependencies": {
-    "react": "^16.12.0"
+    "next": "^13.0.6",
+    "nextra": "2.0.1",
+    "nextra-theme-docs": "2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "dumi": "^1.0.14",
-    "lint-staged": "^10.0.7",
-    "prettier": "^2.2.1",
-    "yorkie": "^2.0.0"
+    "@types/node": "18.11.10",
+    "typescript": "^4.9.3"
   }
 }
