@@ -1,6 +1,6 @@
 {
   "name": "docs.waifu.it",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The new and improved documentation for Waifu.it",
   "scripts": {
     "dev": "next dev",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WaifuAPI/docs.waifu.it.git"
+    "url": "git+https://github.com/WaifuAPI/Documentation.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WaifuAPI/docs.waifu.it/issues"
+    "url": "https://github.com/WaifuAPI/Documentation/issues"
   },
-  "homepage": "https://github.com/WaifuAPI/docs.waifu.it/#readme",
+  "homepage": "https://github.com/WaifuAPI/Documentation/#readme",
   "dependencies": {
     "next": "^13.0.6",
     "nextra": "2.0.1",
