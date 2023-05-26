@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
   },
   faviconGlyph: "🚧",
   banner: {
-    text: "🚧 The Waifu.it documentation is undergoing reconstruction. Please be patient for it to be fully-documented. 🚧",
+    text: "🚧 Documentation is undergoing reconstruction 🚧",
   },
   logo: <span>Documentation</span>,
   navbar: {
