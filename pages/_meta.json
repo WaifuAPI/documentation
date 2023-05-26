@@ -1,0 +1,19 @@
+{
+  "index": "Introduction",
+  "list-of-endpoints": "List of Endpoints",
+  "faq": "FAQ",
+  "rest-api": "API",
+  "libraries": "Libraries",
+  "license": {
+    "title": "License 📝",
+    "type": "page",
+    "href": "https://raw.githubusercontent.com/WaifuAPI/docs.waifu.it/master/LICENSE",
+    "newWindow": true
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "mailto:notaeryk@gmail.com",
+    "newWindow": true
+  }
+}

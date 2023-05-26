@@ -1,0 +1,96 @@
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Get Started
+
+The base URL for the Waifu.it REST API is: [`https://waifu.it/api/:endpoint`](https://waifu.it/api)
+- Replace `:endpoint` with the endpoint you want response from.
+
+## Authentication
+
+- Use the API token that you generate to authenticate each request made to the API.
+
+> If you don't have an API token, then just head over to https://docs.waifu.it/#frequently-asked-questions-faqs, then read and get one for free.
+
+ **Request Header**
+>
+> - Set your API token as the `Authorization` header on every request.
+
+
+**Request Samples**
+
+<Tabs items={["JavaScript", "Python"]}>
+  <Tab>
+    <>
+        ```js
+        import axios from "axios";
+
+        /*
+        Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
+        */
+        const url = "https://waifu.it/api/:endpoint"
+        const data = async () => {
+            try {
+                const { data } = await axios.get(url, { header: {
+                    Authorization: "Your-API-Token",
+                } });
+                return data;
+            } catch (err) {
+                throw new Error(err.message);
+            }
+        };
+
+        console.log(data);
+        ```
+    </>
+
+  </Tab>
+  <Tab>
+    <>
+        ```python
+        import requests
+
+        """
+        Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
+        """
+        url = "https://waifu.it/api/:endpoint"
+        response = requests.get(url, header={
+            "Authorization": "Your-API-Token",
+        })
+        data = response.json()
+
+        print(data)
+        ```
+    </>
+
+  </Tab>
+</Tabs>
+
+**Response Schema**
+
+<Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
+  <Tab>
+  **MIME Type:** `application/json`
+  ```json copy=false
+  "status": 200,
+  "message": {}
+  ```
+  </Tab>
+  <Tab>
+  **MIME Type:** `application/json`
+  ```json copy=false
+  "message": {}
+  ```
+  </Tab>
+  <Tab>
+  **MIME Type:** `application/json`
+  ```json copy=false
+  "message": {}
+  ```
+  </Tab>
+</Tabs>
+
+
+## Notes
+
+- Some `GET` request examples displayed throughout these docs are written for use with Node.js - the [`axios`](https://axios-http.com) library may be required.
+- Some `GET` request examples displayed throughout these docs are written for use with Python - the [`requests`](https://requests.readthedocs.io) library may be required.
