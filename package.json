@@ -1,6 +1,6 @@
 {
   "name": "docs.waifu.it",
-  "version": "0.0.1-alpha",
+  "version": "2.0.1",
   "description": "The new and improved documentation for Waifu.it",
   "scripts": {
     "dev": "next dev",
