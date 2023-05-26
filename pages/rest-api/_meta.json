@@ -1,5 +1,7 @@
 {
   "start": "Get Started",
-
-  "Actions": { "title": "Actions", "theme": { "collapsed": true } }
+  "Actions": { "title": "Actions", "theme": { "collapsed": true } },
+  "Emotes": { "title": "Emotes", "theme": { "collapsed": true } },
+  "Images": { "title": "Images", "theme": { "collapsed": true } },
+  "Texts": { "title": "Texts", "theme": { "collapsed": true } }
 }

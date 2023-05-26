@@ -1,0 +1,18 @@
+{
+  "Fact": {
+    "title": "Fact",
+    "theme": { "collapsed": true }
+  },
+  "Password": {
+    "title": "Password",
+    "theme": { "collapsed": true }
+  },
+  "Quote": {
+    "title": "Quote",
+    "theme": { "collapsed": true }
+  },
+  "Tags": {
+    "title": "Tags",
+    "theme": { "collapsed": true }
+  }
+}
