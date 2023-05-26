@@ -48,12 +48,12 @@ const config: DocsThemeConfig = {
     },
   },
   project: {
-    link: "https://github.com/",
+    link: "https://github.com/WaifuAPI",
   },
   chat: {
-    link: "https://discord.gg/",
+    link: "https://discord.gg/yyW389c",
   },
-  docsRepositoryBase: "https://github.com/Waifu.it/docs.Waifu.it.org",
+  docsRepositoryBase: "https://github.com/WaifuAPI/Documentation/tree/production",
   footer: {
     text: "© 2021-2023 Waifu.it",
   },
