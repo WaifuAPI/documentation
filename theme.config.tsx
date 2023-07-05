@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
   },
   faviconGlyph: "🚧",
   banner: {
-    text: "🚧 Documentation is undergoing reconstruction 🚧",
+    text: "🚧 Undergoing reconstruction 🚧",
   },
   logo: <span>Documentation</span>,
   navbar: {
@@ -59,10 +59,11 @@ const config: DocsThemeConfig = {
   },
   head: function useHead() {
     const description =
-      "A collection of documentation for each provider available on Waifu.it. Find out how to efficiently use the Waifu.it API here!";
+      "A collection of documentation for each endpoints available on Waifu.it. Find out how to efficiently use the Waifu.it API here!";
     return (
       <>
         <meta httpEquiv="Content-Language" content="en" />
+        <meta name="keywords" content="anime, waifu, anime facts, anime quotes, waifu api, waifu pictures, anime api, opensource api" />
         <meta name="description" content={description} />
         <meta name="og:description" content={description} />
       </>
