@@ -14,5 +14,9 @@
   "Tags": {
     "title": "Tags",
     "theme": { "collapsed": true }
+  },
+  "Owoify": {
+    "title": "Owoify",
+    "theme": { "collapsed": true }
   }
 }
