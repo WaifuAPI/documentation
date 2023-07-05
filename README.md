@@ -1,23 +1,60 @@
-# Nextra Docs Template 
+# Waifu.it Documentation
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+## Getting Started
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+Install dependencies,
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+```bash
+$ npm i
+```
 
-## Quick Start
+Start the dev server,
 
-Click the button to clone this repository and deploy it on Vercel:
+```bash
+$ npm run dev
+```
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+Build documentation,
 
-## Local Development
+```bash
+$ npm run build
+```
 
-First, run `pnpm i` to install the dependencies.
+# Contributing
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+All contributions are greatly appreciated, but I recommend creating an issue or replying in a comment to let me know what you are working on first that way we don't overwrite each other.
 
-## License
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on this project.
 
-This project is licensed under the MIT License.
+## Issues
+
+- Feature requests/enhancements
+- Bug reports
+- Questions/feedback
+
+## Branches
+
+- production -> don't touch, this is what's running in production
+
+- staging -> [pull request][pr] this branch for everything
+
+## Pull Requests
+
+All pull requests are welcome!
+
+- [Fork][fork] the repository on GitHub.
+
+- [Clone][cloning] the forked repo to your local machine.
+
+- Do you changes
+
+- Commit your changes
+
+- Push your changes back up to your fork.
+
+- When you're ready, submit a [pull request][pr] so that we can review your changes.
+
+[fork]: https://help.github.com/en/articles/fork-a-repo
+[cloning]: https://help.github.com/en/articles/cloning-a-repository
+[pr]: https://help.github.com/en/articles/about-pull-requests
+
