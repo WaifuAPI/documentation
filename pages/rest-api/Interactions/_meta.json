@@ -1,0 +1,258 @@
+{
+  "Angry": {
+    "title": "Angry",
+    "theme": { "collapsed": true }
+  },
+  "Baka": {
+    "title": "Baka",
+    "theme": { "collapsed": true }
+  },
+  "Bite": {
+    "title": "Bite",
+    "theme": { "collapsed": true }
+  },
+  "Blush": {
+    "title": "Blush",
+    "theme": { "collapsed": true }
+  },
+  "Bonk": {
+    "title": "Bonk",
+    "theme": { "collapsed": true }
+  },
+  "Bored": {
+    "title": "Bored",
+    "theme": { "collapsed": true }
+  },
+  "Bully": {
+    "title": "Bully",
+    "theme": { "collapsed": true }
+  },
+  "Bye": {
+    "title": "Bye",
+    "theme": { "collapsed": true }
+  },
+  "Chase": {
+    "title": "Chase",
+    "theme": { "collapsed": true }
+  },
+  "Cheer": {
+    "title": "Cheer",
+    "theme": { "collapsed": true }
+  },
+  "Cringe": {
+    "title": "Cringe",
+    "theme": { "collapsed": true }
+  },
+  "Cry": {
+    "title": "Cry",
+    "theme": { "collapsed": true }
+  },
+  "Cuddle": {
+    "title": "Cuddle",
+    "theme": { "collapsed": true }
+  },
+  "Dab": {
+    "title": "Dab",
+    "theme": { "collapsed": true }
+  },
+  "Dance": {
+    "title": "Dance",
+    "theme": { "collapsed": true }
+  },
+  "Die": {
+    "title": "Die",
+    "theme": { "collapsed": true }
+  },
+  "Disgust": {
+    "title": "Disgust",
+    "theme": { "collapsed": true }
+  },
+  "Facepalm": {
+    "title": "Facepalm",
+    "theme": { "collapsed": true }
+  },
+  "Feed": {
+    "title": "Feed",
+    "theme": { "collapsed": true }
+  },
+  "Glomp": {
+    "title": "Glomp",
+    "theme": { "collapsed": true }
+  },
+  "Happy": {
+    "title": "Happy",
+    "theme": { "collapsed": true }
+  },
+  "Hi": {
+    "title": "Hi",
+    "theme": { "collapsed": true }
+  },
+  "Highfive": {
+    "title": "Highfive",
+    "theme": { "collapsed": true }
+  },
+  "Hold": {
+    "title": "Hold",
+    "theme": { "collapsed": true }
+  },
+  "Hug": {
+    "title": "Hug",
+    "theme": { "collapsed": true }
+  },
+  "Kick": {
+    "title": "Kick",
+    "theme": { "collapsed": true }
+  },
+  "Kill": {
+    "title": "Kill",
+    "theme": { "collapsed": true }
+  },
+  "Kiss": {
+    "title": "Kiss",
+    "theme": { "collapsed": true }
+  },
+  "Laugh": {
+    "title": "Laugh",
+    "theme": { "collapsed": true }
+  },
+  "Lick": {
+    "title": "Lick",
+    "theme": { "collapsed": true }
+  },
+  "Love": {
+    "title": "Love",
+    "theme": { "collapsed": true }
+  },
+  "Lurk": {
+    "title": "Lurk",
+    "theme": { "collapsed": true }
+  },
+  "Midfing": {
+    "title": "Midfing",
+    "theme": { "collapsed": true }
+  },
+  "Nervous": {
+    "title": "Nervous",
+    "theme": { "collapsed": true }
+  },
+  "Nom": {
+    "title": "Nom",
+    "theme": { "collapsed": true }
+  },
+  "Nope": {
+    "title": "Nope",
+    "theme": { "collapsed": true }
+  },
+  "Nuzzle": {
+    "title": "Nuzzle",
+    "theme": { "collapsed": true }
+  },
+  "Panic": {
+    "title": "Panic",
+    "theme": { "collapsed": true }
+  },
+  "Pat": {
+    "title": "Pat",
+    "theme": { "collapsed": true }
+  },
+  "Peck": {
+    "title": "Peck",
+    "theme": { "collapsed": true }
+  },
+  "Poke": {
+    "title": "Poke",
+    "theme": { "collapsed": true }
+  },
+  "Pout": {
+    "title": "Pout",
+    "theme": { "collapsed": true }
+  },
+  "Punch": {
+    "title": "Punch",
+    "theme": { "collapsed": true }
+  },
+  "Run": {
+    "title": "Run",
+    "theme": { "collapsed": true }
+  },
+  "Sad": {
+    "title": "Sad",
+    "theme": { "collapsed": true }
+  },
+  "Shoot": {
+    "title": "Shoot",
+    "theme": { "collapsed": true }
+  },
+  "Shrug": {
+    "title": "Shrug",
+    "theme": { "collapsed": true }
+  },
+  "Sip": {
+    "title": "Sip",
+    "theme": { "collapsed": true }
+  },
+  "Slap": {
+    "title": "Slap",
+    "theme": { "collapsed": true }
+  },
+  "Sleepy": {
+    "title": "Sleepy",
+    "theme": { "collapsed": true }
+  },
+  "Smile": {
+    "title": "Smile",
+    "theme": { "collapsed": true }
+  },
+  "Smug": {
+    "title": "Smug",
+    "theme": { "collapsed": true }
+  },
+  "Stab": {
+    "title": "Stab",
+    "theme": { "collapsed": true }
+  },
+  "Stare": {
+    "title": "Stare",
+    "theme": { "collapsed": true }
+  },
+  "Suicide": {
+    "title": "Suicide",
+    "theme": { "collapsed": true }
+  },
+  "Tease": {
+    "title": "Tease",
+    "theme": { "collapsed": true }
+  },
+  "Think": {
+    "title": "Think",
+    "theme": { "collapsed": true }
+  },
+  "Thumbsup": {
+    "title": "Thumbsup",
+    "theme": { "collapsed": true }
+  },
+  "Tickle": {
+    "title": "Tickle",
+    "theme": { "collapsed": true }
+  },
+  "Triggered": {
+    "title": "Triggered",
+    "theme": { "collapsed": true }
+  },
+  "Wag": {
+    "title": "Wag",
+    "theme": { "collapsed": true }
+  },
+  "Wave": {
+    "title": "Wave",
+    "theme": { "collapsed": true }
+  },
+  "Wink": {
+    "title": "Wink",
+    "theme": { "collapsed": true }
+  },
+  "Yes": {
+    "title": "Yes",
+    "theme": { "collapsed": true }
+  }
+}
