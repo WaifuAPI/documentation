@@ -1,7 +1,6 @@
 {
   "start": "Get Started",
-  "Actions": { "title": "Actions", "theme": { "collapsed": true } },
-  "Emotes": { "title": "Emotes", "theme": { "collapsed": true } },
+  "Interactions": { "title": "Interactions", "theme": { "collapsed": true } },
   "Images": { "title": "Images", "theme": { "collapsed": true } },
   "Texts": { "title": "Texts", "theme": { "collapsed": true } }
 }
