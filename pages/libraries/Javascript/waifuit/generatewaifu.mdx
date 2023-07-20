@@ -1,0 +1,46 @@
+---
+title: waifu.it | Generate Waifu
+---
+
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Generate Fact
+
+Generate random anime Waifu from a huge database.
+
+
+## Functions
+
+| Function |   Type   | Description                                          | Required? |
+| :------: | :------: | ---------------------------------------------------- | :-------: |
+| getWaifu  | function | The search function to generate a random anime Waifu. |    Yes    |
+
+## Request Samples
+
+<Tabs items={["Node.js"]}>
+  <Tab>
+    <>
+        ```js
+        import Client from "waifu.it";
+
+        // Replace <TOKEN> with your API Token
+        const api = new Client("<TOKEN>");
+        api.getWaifu().then((res) => console.log(res));
+        ```
+    </>
+
+  </Tab>
+</Tabs>
+
+## Response Schema
+
+<Tabs items={["200 OK"]}>
+  <Tab>
+  **Content Type:** `application/json`
+  ```json copy=false
+{
+  "id": 5,
+}
+  ```
+  </Tab>
+</Tabs>

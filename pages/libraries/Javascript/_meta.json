@@ -2,5 +2,9 @@
   "animefact": {
     "title": "anime-facts",
     "theme": { "collapsed": true }
+  },
+  "waifuit": {
+    "title": "waifu.it",
+    "theme": { "collapsed": true }
   }
 }
