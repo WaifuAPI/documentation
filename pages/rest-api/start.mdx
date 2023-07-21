@@ -30,7 +30,7 @@ The base URL for the Waifu.it REST API is: [`https://waifu.it/api/:endpoint`](ht
         const url = "https://waifu.it/api/:endpoint"
         const data = async () => {
             try {
-                const { data } = await axios.get(url, { header: {
+                const { data } = await axios.get(url, { headers: {
                     Authorization: "Your-API-Token",
                 } });
                 return data;
@@ -53,7 +53,7 @@ The base URL for the Waifu.it REST API is: [`https://waifu.it/api/:endpoint`](ht
         Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
         """
         url = "https://waifu.it/api/:endpoint"
-        response = requests.get(url, header={
+        response = requests.get(url, headers={
             "Authorization": "Your-API-Token",
         })
         data = response.json()
@@ -61,7 +61,6 @@ The base URL for the Waifu.it REST API is: [`https://waifu.it/api/:endpoint`](ht
         print(data)
         ```
     </>
-
   </Tab>
 </Tabs>
 
@@ -78,12 +77,14 @@ The base URL for the Waifu.it REST API is: [`https://waifu.it/api/:endpoint`](ht
   <Tab>
   **Content Type:** `application/json`
   ```json copy=false
+  "status": 404,
   "message": {}
   ```
   </Tab>
   <Tab>
   **Content Type:** `application/json`
   ```json copy=false
+  "status": 500,
   "message": {}
   ```
   </Tab>

@@ -1,1 +1,96 @@
-Work in progress
+
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Search
+
+The `/poke` endpoint allows users to receive appropriate poke anime responses from the server. This document provides a 
+detailed description of the endpoint, including input headers, response examples, and code snippets in Python and Node.js 
+for handling the requests.
+
+## Endpoint Details
+
+- **URL**: `/poke`
+- **Method**: GET
+- **Content Type**: application/json
+
+## Request Headers
+
+The request to the `/poke` endpoint should be a JSON object with the following headers:
+
+| Header          | Type    | Description                                          | Required |
+| --------------- | ------- | ---------------------------------------------------- | -------- |
+| `Authorization` | string  | The unique identifier of the user sending the request. | True     |
+
+### Example Request
+
+<Tabs items={["JavaScript", "Python"]}>
+  <Tab>
+    ```js
+    import axios from "axios";
+
+    /*
+    Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
+    */
+    const url = "https://waifu.it/api/poke";
+    const data = async () => {
+      try {
+        const { data } = await axios.get(url, { headers: {
+          Authorization: "Your-API-Token",
+        } });
+        return data;
+      } catch (err) {
+        throw new Error(err.message);
+      }
+    };
+
+    console.log(data);
+    ```
+  </Tab>
+  <Tab>
+    ```python
+    import requests
+
+    """
+    Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
+    """
+    url = "https://waifu.it/api/poke"
+    response = requests.get(url, headers={
+      "Authorization": "Your-API-Token",
+    })
+    data = response.json()
+
+    print(data)
+    ```
+  </Tab>
+</Tabs>
+
+## Responses
+
+The server will respond with an appropriate message based on the input provided. The possible response messages are as follows:
+
+<Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 200,
+      "message": {}
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 404,
+      "message": {}
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 500,
+      "message": {}
+    ```
+  </Tab>
+</Tabs>
+
+This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/) 
+for Python to interact with the `/poke` endpoint.
