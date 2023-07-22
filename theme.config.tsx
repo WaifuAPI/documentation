@@ -1,5 +1,5 @@
 import React from "react";
-import { DocsThemeConfig, useTheme } from "nextra-theme-docs";
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   gitTimestamp: false,
@@ -8,7 +8,13 @@ const config: DocsThemeConfig = {
   },
   faviconGlyph: "🚧",
   banner: {
-    text: "🚧 Undergoing reconstruction 🚧",
+  // text: "🚧 Undergoing reconstruction 🚧",
+    key: '3.0-release',
+    text: (
+      <a href="https://github.com/WaifuAPI/Documentation/releases/tag/3.0.4" target="_blank">
+        🎉 Documentation 3.0 is released. Read more →
+      </a>
+    )
   },
   logo: <span>Documentation</span>,
   navbar: {
@@ -55,7 +61,15 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/WaifuAPI/Documentation/tree/production",
   footer: {
-    text: "© 2021-2023 Waifu.it",
+    text: (
+      <span>
+         AGPL-3.0 {new Date().getFullYear()} ©{' '}
+        <a href="https://waifu.it" target="_blank">
+          Waifu.it
+        </a>
+        .
+      </span>
+    )
   },
   head: function useHead() {
     const description =
