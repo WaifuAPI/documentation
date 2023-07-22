@@ -6,9 +6,8 @@ const config: DocsThemeConfig = {
   useNextSeoProps: () => {
     return { titleTemplate: `%s - Waifu.it` };
   },
-  faviconGlyph: "🚧",
+  faviconGlyph: "📝",
   banner: {
-  // text: "🚧 Undergoing reconstruction 🚧",
     key: '3.0-release',
     text: (
       <a href="https://github.com/WaifuAPI/Documentation/releases/tag/3.0.4" target="_blank">
