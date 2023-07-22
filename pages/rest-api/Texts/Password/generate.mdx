@@ -2,20 +2,20 @@ import { Tab, Tabs } from "nextra-theme-docs";
 
 # Search
 
-This endpoint allows you to access and retrieve information about your favorite facts. To access the `/fact` endpoint, you 
+This endpoint allows you to generate random passwords. To access the `/password` endpoint, you 
 will need to provide the proper authentication using the Authorization header.
 
 
 ## Endpoint Details
-The `/fact` endpoint allows you to retrieve information about a specific fact.
+The `/password` endpoint allows you to retrieve information about a specific password.
 
-- **URL**: `/fact`
+- **URL**: `/password`
 - **Method**: GET
 - **Content Type**: application/json
 
 ## Authentication
 
-To make requests to the `/fact` endpoint, you must include an `Authorization` header in your API calls. This header should contain a valid access token.
+To make requests to the `/password` endpoint, you must include an `Authorization` header in your API calls. This header should contain a valid access token.
 
 ### Example Authorization Header
 
@@ -25,16 +25,25 @@ Authorization: YOUR_ACCESS_TOKEN
 
 Replace `YOUR_ACCESS_TOKEN` with the actual token provided to you.
 
-## Request Headers
+## Request
+### Headers
 
-The request to the `/fact` endpoint should be a JSON object with the following headers:
+The request to the `/password` endpoint should be a JSON object with the following headers:
 
 | Header          | Type    | Description                                          | Required |
 | --------------- | ------- | ---------------------------------------------------- | -------- |
 | `Authorization` | string  | The unique identifier of the user sending the request. | True     |
 
-### Example Request
-Here's example of how to make a request to the `/fact` endpoint.
+### Parameters
+
+The request parameters for the `/password` endpoint.
+
+| Parameter     | Type   | Description                                                                                                   | Required |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------- | -------- |
+| `charLength`  | number | (Optional) The desired length of the generated password. If not provided, a default length is used.           | False    |
+
+## Example Request
+Here's an example of how to make a request to the `/password` endpoint.
 
 <Tabs items={["JavaScript", "Python"]}>
   <Tab>
@@ -44,12 +53,18 @@ Here's example of how to make a request to the `/fact` endpoint.
     /*
     Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
     */
-    const url = "https://fact.it/api/fact";
+    const url = "https://waifu.it/api/password";
+    const charLength = 12; // Replace with your desired password length (optional).
     const data = async () => {
       try {
-        const { data } = await axios.get(url, { headers: {
-          Authorization: "YOUR_ACCESS_TOKEN",
-        } });
+        const { data } = await axios.get(url, { 
+          headers: {
+            Authorization: "YOUR_ACCESS_TOKEN",
+            },
+          params: {
+            charLength: charLength || undefined,
+          }
+      });
         return data;
       } catch (err) {
         throw new Error(err.message);
@@ -66,10 +81,18 @@ Here's example of how to make a request to the `/fact` endpoint.
     """
     Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
     """
-    url = "https://waifu.it/api/fact"
+    url = "https://waifu.it/api/password"
+
+    charLength = 12  # Replace with your desired password length (optional).
+
+    params = {
+        "charLength": charLength if charLength is not None else None,
+    }
+
     response = requests.get(url, headers={
-      "Authorization": "YOUR_ACCESS_TOKEN",
-    })
+        "Authorization": "YOUR_ACCESS_TOKEN",
+    }, params=params)
+
     data = response.json()
 
     print(data)
@@ -84,16 +107,14 @@ Remember to replace `YOUR_ACCESS_TOKEN` with your actual access token.
 The server will respond with an appropriate message based on the input provided. A successfully API request will respond 
 with a JSON object containing the following information:
 
-- `_id`: The unique identifier of the fact.
-- `fact`: This pertains to various facts and information related to anime and related topics.
+- `password`: The unique password that is generated for you.
 - `status`: Response status
 
 <Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
   <Tab>
     **Content Type:** `application/json`
     ```json copy=false
-      "_id": 48,
-      "fact": "TEZUKA Osamu is the most famous manga artist in Japan."
+      "password": "&CbO891uM7G3"
       "status": 200,
     ```
   </Tab>
@@ -114,4 +135,4 @@ with a JSON object containing the following information:
 </Tabs>
 
 This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/) 
-for Python to interact with the `/fact` endpoint.
+for Python to interact with the `/password` endpoint.

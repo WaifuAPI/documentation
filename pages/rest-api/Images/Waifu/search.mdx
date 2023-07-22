@@ -1,1 +1,145 @@
-owo WIP
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Search
+
+This endpoint allows you to access and retrieve information about your favorite waifus. To access the `/waifu` endpoint, you 
+will need to provide the proper authentication using the Authorization header.
+
+
+## Endpoint Details
+The `/waifu` endpoint allows you to retrieve information about a specific waifu.
+
+- **URL**: `/waifu`
+- **Method**: GET
+- **Content Type**: application/json
+
+## Authentication
+
+To make requests to the `/waifu` endpoint, you must include an `Authorization` header in your API calls. This header should contain a valid access token.
+
+### Example Authorization Header
+
+```jsx
+Authorization: YOUR_ACCESS_TOKEN
+```
+
+Replace `YOUR_ACCESS_TOKEN` with the actual token provided to you.
+
+## Request Headers
+
+The request to the `/waifu` endpoint should be a JSON object with the following headers:
+
+| Header          | Type    | Description                                          | Required |
+| --------------- | ------- | ---------------------------------------------------- | -------- |
+| `Authorization` | string  | The unique identifier of the user sending the request. | True     |
+
+### Example Request
+Here's example of how to make a request to the `/waifu` endpoint.
+
+<Tabs items={["JavaScript", "Python"]}>
+  <Tab>
+    ```js
+    import axios from "axios";
+
+    /*
+    Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
+    */
+    const url = "https://waifu.it/api/waifu";
+    const data = async () => {
+      try {
+        const { data } = await axios.get(url, { headers: {
+          Authorization: "YOUR_ACCESS_TOKEN",
+        } });
+        return data;
+      } catch (err) {
+        throw new Error(err.message);
+      }
+    };
+
+    console.log(data);
+    ```
+  </Tab>
+  <Tab>
+    ```python
+    import requests
+
+    """
+    Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
+    """
+    url = "https://waifu.it/api/waifu"
+    response = requests.get(url, headers={
+      "Authorization": "YOUR_ACCESS_TOKEN",
+    })
+    data = response.json()
+
+    print(data)
+    ```
+  </Tab>
+</Tabs>
+
+Remember to replace `YOUR_ACCESS_TOKEN` with your actual access token.
+
+## Responses
+
+The server will respond with an appropriate message based on the input provided. A successfully API request will respond 
+with a JSON object containing the following information:
+
+- `_id`: The unique identifier of the waifu.
+- `names`: The names of the waifu.
+- `from`: The anime from where the waifu belongs to.
+- `statistics`: Her statistics from the users.
+- `images`: The array of URLs to an image of the waifu.
+- `status`: Response status
+
+<Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 200,
+      "_id": 48,
+      "images": [
+        "https://rei.animecharactersdatabase.com/uploads/chars/67975-1468280545.jpg",
+        "https://rei.animecharactersdatabase.com/uploads/chars/67975-1074357995.jpg",
+        "https://rei.animecharactersdatabase.com/uploads/chars/67975-1025264171.jpg",
+        "https://rei.animecharactersdatabase.com/uploads/chars/67975-347417678.jpg",
+        "https://thicc.mywaifulist.moe/waifus/60/ac08a0604cef48cfb60db8946b4eaed65a7d5d3c8b28a340df0259328f984131.jpeg",
+        "https://thicc.mywaifulist.moe/waifus/60/059e4c365b97ad2dc24c459d02e9cfe9771c3e80305f893b4befbb906e537171.jpeg",
+        "https://thicc.mywaifulist.moe/waifus/60/88fb2e15ad401f5f14c41e2c9e4c8528f18af52ae8d45b67b3c8e652a001f4e2.jpeg"
+      ],
+      "names": {
+        "en": "Kanade Tachibana",
+        "jp": "立華 かなで",
+        "alt": "Tenshi"
+      },
+      "from": {
+        "name": "Angel Beats!",
+        "type": "Anime"
+      },
+      "statistics": {
+        "fav": 205,
+        "love": 160,
+        "hate": 20,
+        "upvote": 70,
+        "downvote": 8
+      }
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 404,
+      "message": {}
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 500,
+      "message": {}
+    ```
+  </Tab>
+</Tabs>
+
+This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/) 
+for Python to interact with the `/waifu` endpoint.
+That's it! You are now ready to use the `/waifu` endpoint to retrieve information about your favorite waifus. Happy coding!

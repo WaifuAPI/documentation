@@ -1,0 +1,49 @@
+---
+title: waifu.it | Generate Quote
+---
+
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Generate Fact
+
+Generate random anime Quote from a huge database.
+
+
+## Functions
+
+| Function |   Type   | Description                                          | Required? |
+| :------: | :------: | ---------------------------------------------------- | :-------: |
+| getQuote  | function | The search function to generate a random anime quote. |    Yes    |
+
+## Request Samples
+
+<Tabs items={["Node.js"]}>
+  <Tab>
+    <>
+        ```js
+        import Client from "waifu.it";
+
+        // Replace <TOKEN> with your API Token
+        const api = new Client("<TOKEN>");
+        api.getQuote().then((res) => console.log(res));
+        ```
+    </>
+
+  </Tab>
+</Tabs>
+
+## Response Schema
+
+<Tabs items={["200 OK"]}>
+  <Tab>
+  **Content Type:** `application/json`
+  ```json copy=false
+{
+  "id": 5,
+  "quote": "Even children are forced to grow up in the face of pain.",
+  "author": "Pain",
+  "anime": "Naruto"
+}
+  ```
+  </Tab>
+</Tabs>
