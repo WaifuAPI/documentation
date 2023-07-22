@@ -1,0 +1,138 @@
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Search
+
+This endpoint allows you to generate uvuified text. To access the `/uvuify` endpoint, you 
+will need to provide the proper authentication using the Authorization header.
+
+
+## Endpoint Details
+The `/uvuify` endpoint allows you to retrieve information about a specific uvuify.
+
+- **URL**: `/uvuify`
+- **Method**: GET
+- **Content Type**: application/json
+
+## Authentication
+
+To make requests to the `/uvuify` endpoint, you must include an `Authorization` header in your API calls. This header should contain a valid access token.
+
+### Example Authorization Header
+
+```jsx
+Authorization: YOUR_ACCESS_TOKEN
+```
+
+Replace `YOUR_ACCESS_TOKEN` with the actual token provided to you.
+
+## Request
+### Headers
+
+The request to the `/uvuify` endpoint should be a JSON object with the following headers:
+
+| Header          | Type    | Description                                          | Required |
+| --------------- | ------- | ---------------------------------------------------- | -------- |
+| `Authorization` | string  | The unique identifier of the user sending the request. | True     |
+
+### Parameters
+
+These are the request parameters for the `/uvuify` endpoint.
+
+| Parameter | Type   | Description                                                        | Required |
+| --------- | ------ | ------------------------------------------------------------------ | -------- |
+| `text`    | string | The text you want to convert into an "uvu" language-style format.  | True     |
+
+## Example Request
+Here's an example of how to make a request to the `/uvuify` endpoint.
+
+<Tabs items={["JavaScript", "Python"]}>
+  <Tab>
+    ```js
+    import axios from "axios";
+
+    /*
+    Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
+    */
+    const url = "https://waifu.it/api/uvuify";
+    const text = "Hello world"; // Replace with your desired uvuify length (optional).
+    const data = async () => {
+      try {
+        const { data } = await axios.get(url, { 
+          headers: {
+            Authorization: "YOUR_ACCESS_TOKEN",
+            },
+          params: {
+            text: text || undefined,
+          }
+      });
+        return data;
+      } catch (err) {
+        throw new Error(err.message);
+      }
+    };
+
+    console.log(data);
+    ```
+  </Tab>
+  <Tab>
+    ```python
+    import requests
+
+    """
+    Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
+    """
+    url = "https://waifu.it/api/uvuify"
+
+    text = "Hello world"  # Replace with your desired uvuify length (optional).
+
+    params = {
+        "text": text if text is not None else None,
+    }
+
+    response = requests.get(url, headers={
+        "Authorization": "YOUR_ACCESS_TOKEN",
+    }, params=params)
+
+    data = response.json()
+
+    print(data)
+    ```
+  </Tab>
+</Tabs>
+
+Remember to replace `YOUR_ACCESS_TOKEN` with your actual access token.
+
+## Responses
+
+The server will respond with an appropriate message based on the input provided. A successfully API request will respond 
+with a JSON object containing the following information:
+
+- `uvuify`: The uvuified that is generated for you.
+- `status`: Response status
+
+<Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "text": "Hevvo wovvud"
+      "status": 200,
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 404,
+      "message": {}
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 500,
+      "message": {}
+    ```
+  </Tab>
+</Tabs>
+
+This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/) 
+for Python to interact with the `/uvuify` endpoint.
