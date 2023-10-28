@@ -1,4 +1,3 @@
-
 # Contributing Guidelines
 
 Welcome to the Waifu.it community! We value your contributions and aim to make the process of contributing as straightforward as possible. You can help in various ways, such as:
@@ -20,3 +19,7 @@ If you have a feature in mind, we appreciate it when feature requests include:
 - A concise summary of the idea
 - Explanation of what the feature is and why it would be beneficial
 - Any additional context, like images or resources that could help in implementing the feature
+
+## Licensing
+
+By contributing to the Waifu.it project, you agree that your contributions will be subject to the terms specified in our [LICENSE file](LICENSE.md).
