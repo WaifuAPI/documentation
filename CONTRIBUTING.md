@@ -1,26 +1,25 @@
-# Contributing to Waifu.it
+# Contributing Guidelines
 
-We love your input! We want to make contributing to this project as easy as possible, whether it's:
+Welcome to the Waifu.it community! We value your contributions and aim to make the process of contributing as straightforward as possible. You can help in various ways, such as:
 
-- Submitting a fix
-- Reporting an issue
-- Becoming a maintainer
+- Fixing issues
+- Reporting bugs or problems
+- Becoming a project maintainer
 - Proposing new features
-- Discussing the current state of the code
+- Engaging in discussions about the project's codebase
 
 ## Code of Conduct
 
-The code of conduct is described in [Code of Conduct](CODE_OF_CONDUCT.md).
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md) to understand our community's behavior standards.
 
-## Feature Request
+## Feature Requests
 
-Great Feature Requests tend to have:
+If you have a feature in mind, we appreciate it when feature requests include:
 
-- A quick idea summary.
-- What & why you wanted to add the specific feature.
-- Additional context like images, links to resources to implement the feature etc, etc.
+- A concise summary of the idea
+- Explanation of what the feature is and why it would be beneficial
+- Any additional context, like images or resources that could help in implementing the feature
 
-## License
+## Licensing
 
-By contributing to Animu Documentation, you agree that your contributions will be licensed
-under the [LICENSE file](LICENSE.md).
+By contributing to the Waifu.it project, you agree that your contributions will be subject to the terms specified in our [LICENSE file](LICENSE.md).
