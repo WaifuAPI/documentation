@@ -30,7 +30,7 @@ The request to the `/die` endpoint should be a JSON object with the following he
     /*
     Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
     */
-    const url = "https://waifu.it/api/die";
+    const url = "https://waifu.it/api/v4/die";
     const data = async () => {
       try {
         const { data } = await axios.get(url, { headers: {
@@ -52,7 +52,7 @@ The request to the `/die` endpoint should be a JSON object with the following he
     """
     Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
     """
-    url = "https://waifu.it/api/die"
+    url = "https://waifu.it/api/v4/die"
     response = requests.get(url, headers={
       "Authorization": "Your-API-Token",
     })

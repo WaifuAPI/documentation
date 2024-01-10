@@ -44,7 +44,7 @@ Here's example of how to make a request to the `/fact` endpoint.
     /*
     Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
     */
-    const url = "https://waifu.it/api/fact";
+    const url = "https://waifu.it/api/v4/fact";
     const data = async () => {
       try {
         const { data } = await axios.get(url, { headers: {
@@ -66,7 +66,7 @@ Here's example of how to make a request to the `/fact` endpoint.
     """
     Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
     """
-    url = "https://waifu.it/api/fact"
+    url = "https://waifu.it/api/v4/fact"
     response = requests.get(url, headers={
       "Authorization": "YOUR_ACCESS_TOKEN",
     })
