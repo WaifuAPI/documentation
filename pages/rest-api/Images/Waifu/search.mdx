@@ -33,6 +33,15 @@ The request to the `/waifu` endpoint should be a JSON object with the following 
 | --------------- | ------- | ---------------------------------------------------- | -------- |
 | `Authorization` | string  | The unique identifier of the user sending the request. | True     |
 
+### Parameters
+
+The request parameters for the `/waifu?{parameter}={value}` endpoint.
+
+| Parameter | Type   | Description                                           | Required |
+| ----------| ------ | ----------------------------------------------------- | -------- |
+| `name`    | string | (Optional) The desired character name for the query. If not provided, a random waifu will be generated. | False    |
+| `anime`   | string | (Optional) The desired anime name for the query. If not provided, a random waifu will be selected. | False    |
+
 ### Example Request
 Here's example of how to make a request to the `/waifu` endpoint.
 
