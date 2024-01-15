@@ -5,7 +5,7 @@ import { Tab, Tabs,Callout } from "nextra-theme-docs";
 ## Base URL
 
 ```
-https://waifu.it/api
+https://waifu.it/api/v4
 ```
 
 ## API Versioning
@@ -54,7 +54,7 @@ Authorization: MTk4NjIyNDgzNDcxOTI1MjQ4.Cl2FMQ.ZnCjm1XVW7vRze4b7Cq4se7kKWs
         /*
         Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
         */
-        const url = "https://waifu.it/api/:endpoint"
+        const url = "https://waifu.it/api/v4/:endpoint"
         const data = async () => {
             try {
                 const { data } = await axios.get(url, { headers: {
@@ -79,7 +79,7 @@ Authorization: MTk4NjIyNDgzNDcxOTI1MjQ4.Cl2FMQ.ZnCjm1XVW7vRze4b7Cq4se7kKWs
         """
         Replace "Your-API-Token" with the token you got from the Kohai Bot and the endpoint.
         """
-        url = "https://waifu.it/api/:endpoint"
+        url = "https://waifu.it/api/v4/:endpoint"
         response = requests.get(url, headers={
             "Authorization": "Your-API-Token",
         })
