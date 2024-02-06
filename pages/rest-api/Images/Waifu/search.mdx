@@ -2,11 +2,11 @@ import { Tab, Tabs } from "nextra-theme-docs";
 
 # Search
 
-This endpoint allows you to access and retrieve information about your favorite waifus. To access the `/waifu` endpoint, you 
+This endpoint allows you to access and retrieve information about your favorite waifus. To access the `/waifu` endpoint, you
 will need to provide the proper authentication using the Authorization header.
 
-
 ## Endpoint Details
+
 The `/waifu` endpoint allows you to retrieve information about a specific waifu.
 
 - **URL**: `/waifu`
@@ -20,7 +20,7 @@ To make requests to the `/waifu` endpoint, you must include an `Authorization` h
 ### Example Authorization Header
 
 ```jsx
-Authorization: YOUR_ACCESS_TOKEN
+Authorization: YOUR_ACCESS_TOKEN;
 ```
 
 Replace `YOUR_ACCESS_TOKEN` with the actual token provided to you.
@@ -29,20 +29,21 @@ Replace `YOUR_ACCESS_TOKEN` with the actual token provided to you.
 
 The request to the `/waifu` endpoint should be a JSON object with the following headers:
 
-| Header          | Type    | Description                                          | Required |
-| --------------- | ------- | ---------------------------------------------------- | -------- |
-| `Authorization` | string  | The unique identifier of the user sending the request. | True     |
+| Header          | Type   | Description                                            | Required |
+| --------------- | ------ | ------------------------------------------------------ | -------- |
+| `Authorization` | string | The unique identifier of the user sending the request. | True     |
 
 ### Parameters
 
 The request parameters for the `/waifu?{parameter}={value}` endpoint.
 
-| Parameter | Type   | Description                                           | Required |
-| ----------| ------ | ----------------------------------------------------- | -------- |
+| Parameter | Type   | Description                                                                                             | Required |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------- | -------- |
 | `name`    | string | (Optional) The desired character name for the query. If not provided, a random waifu will be generated. | False    |
-| `anime`   | string | (Optional) The desired anime name for the query. If not provided, a random waifu will be selected. | False    |
+| `anime`   | string | (Optional) The desired anime name for the query. If not provided, a random waifu will be selected.      | False    |
 
 ### Example Request
+
 Here's example of how to make a request to the `/waifu` endpoint.
 
 <Tabs items={["JavaScript", "Python"]}>
@@ -67,6 +68,7 @@ Here's example of how to make a request to the `/waifu` endpoint.
 
     console.log(data);
     ```
+
   </Tab>
   <Tab>
     ```python
@@ -83,6 +85,7 @@ Here's example of how to make a request to the `/waifu` endpoint.
 
     print(data)
     ```
+
   </Tab>
 </Tabs>
 
@@ -90,48 +93,104 @@ Remember to replace `YOUR_ACCESS_TOKEN` with your actual access token.
 
 ## Responses
 
-The server will respond with an appropriate message based on the input provided. A successfully API request will respond 
+The server will respond with an appropriate message based on the input provided. A successfully API request will respond
 with a JSON object containing the following information:
 
 - `_id`: The unique identifier of the waifu.
-- `names`: The names of the waifu.
-- `from`: The anime from where the waifu belongs to.
-- `statistics`: Her statistics from the users.
-- `images`: The array of URLs to an image of the waifu.
-- `status`: Response status
+- `name`: Information about the waifu's name.
+  - `first`: The first name of the waifu.
+  - `middle`: The middle name of the waifu (if available).
+  - `last`: The last name of the waifu (if available).
+  - `full`: The full name of the waifu.
+  - `native`: The native name of the waifu.
+  - `userPreferred`: The user's preferred name for the waifu.
+  - `alternative`: An array of alternative names for the waifu.
+  - `alternativeSpoiler`: An array of alternative names with potential spoilers.
+- `image`: Information about the waifu's image.
+  - `large`: URL to a large image of the waifu.
+- `favourites`: The number of users who have favorited the waifu.
+- `siteUrl`: URL to the waifu's page on AniList.
+- `description`: Description of the waifu (if available).
+- `age`: Age of the waifu (if available).
+- `gender`: Gender of the waifu.
+- `bloodType`: Blood type of the waifu (if available).
+- `dateOfBirth`: Date of birth of the waifu (if available).
+  - `year`: Year of birth.
+  - `month`: Month of birth.
+  - `day`: Day of birth.
+- `media`: Information about the media associated with the waifu.
+  - `nodes`: An array of media nodes.
+    - `id`: The unique identifier of the media.
+    - `idMal`: The MyAnimeList identifier of the media.
+    - `coverImage`: Information about the cover image of the media.
+      - `medium`: URL to a medium-sized cover image of the media.
+    - `bannerImage`: URL to a banner image of the media (if available).
+    - `title`: Information about the title of the media.
+      - `romaji`: Romaji representation of the title.
+      - `english`: English representation of the title (if available).
+      - `native`: Native representation of the title.
+      - `userPreferred`: User-preferred representation of the title.
+    - `synonyms`: An array of synonyms for the media title.
+    - `popularity`: Popularity score of the media.
+    - `type`: Type of the media (e.g., ANIME, MANGA).
+    - `format`: Format of the media (e.g., TV, MANGA).
 
 <Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
   <Tab>
     **Content Type:** `application/json`
     ```json copy=false
-      "status": 200,
-      "_id": 48,
-      "images": [
-        "https://rei.animecharactersdatabase.com/uploads/chars/67975-1468280545.jpg",
-        "https://rei.animecharactersdatabase.com/uploads/chars/67975-1074357995.jpg",
-        "https://rei.animecharactersdatabase.com/uploads/chars/67975-1025264171.jpg",
-        "https://rei.animecharactersdatabase.com/uploads/chars/67975-347417678.jpg",
-        "https://thicc.mywaifulist.moe/waifus/60/ac08a0604cef48cfb60db8946b4eaed65a7d5d3c8b28a340df0259328f984131.jpeg",
-        "https://thicc.mywaifulist.moe/waifus/60/059e4c365b97ad2dc24c459d02e9cfe9771c3e80305f893b4befbb906e537171.jpeg",
-        "https://thicc.mywaifulist.moe/waifus/60/88fb2e15ad401f5f14c41e2c9e4c8528f18af52ae8d45b67b3c8e652a001f4e2.jpeg"
-      ],
-      "names": {
-        "en": "Kanade Tachibana",
-        "jp": "立華 かなで",
-        "alt": "Tenshi"
-      },
-      "from": {
-        "name": "Angel Beats!",
-        "type": "Anime"
-      },
-      "statistics": {
-        "fav": 205,
-        "love": 160,
-        "hate": 20,
-        "upvote": 70,
-        "downvote": 8
-      }
+    "status": 200,
+    "_id": 11251,
+    "name": {
+        "first": "Nanako",
+        "middle": null,
+        "last": "Kaisei",
+        "full": "Nanako Kaisei",
+        "native": "開成 奈々子",
+        "userPreferred": "Nanako Kaisei",
+        "alternative": [],
+        "alternativeSpoiler": []
+    },
+    "image": {
+        "large": "https://s4.anilist.co/file/anilistcdn/character/large/b220909-iQMT7Xyikifz.jpg"
+    },
+    "favourites": 0,
+    "siteUrl": "https://anilist.co/character/220909",
+    "description": null,
+    "age": null,
+    "gender": "Female",
+    "bloodType": null,
+    "dateOfBirth": {
+        "year": null,
+        "month": null,
+        "day": null
+    },
+    "media": {
+        "nodes": [
+            {
+                "id": 106964,
+                "idMal": 118955,
+                "coverImage": {
+                    "medium": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/small/nx106964-FeyF5m9SQnXE.jpg"
+                },
+                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/manga/banner/106964-ryuN7wdxWc5X.jpg",
+                "title": {
+                    "romaji": "Zenaku no Kuzu",
+                    "english": null,
+                    "native": "善悪の屑",
+                    "userPreferred": "Zenaku no Kuzu"
+                },
+                "synonyms": [
+                    "The Scum of Good and Evil"
+                ],
+                "popularity": 548,
+                "type": "MANGA",
+                "format": "MANGA"
+            }
+        ]
+    }
     ```
+
   </Tab>
   <Tab>
     **Content Type:** `application/json`
@@ -149,6 +208,6 @@ with a JSON object containing the following information:
   </Tab>
 </Tabs>
 
-This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/) 
+This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/)
 for Python to interact with the `/waifu` endpoint.
 That's it! You are now ready to use the `/waifu` endpoint to retrieve information about your favorite waifus. Happy coding!
