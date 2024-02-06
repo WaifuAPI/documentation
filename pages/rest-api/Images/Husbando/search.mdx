@@ -1,0 +1,233 @@
+import { Tab, Tabs } from "nextra-theme-docs";
+
+# Search
+
+This endpoint allows you to access and retrieve information about your favorite husbandos. To access the `/husbando` endpoint, you
+will need to provide the proper authentication using the Authorization header.
+
+## Endpoint Details
+
+The `/husbando` endpoint allows you to retrieve information about a specific husbando.
+
+- **URL**: `/husbando`
+- **Method**: GET
+- **Content Type**: application/json
+
+## Authentication
+
+To make requests to the `/husbando` endpoint, you must include an `Authorization` header in your API calls. This header should contain a valid access token.
+
+### Example Authorization Header
+
+```jsx
+Authorization: YOUR_ACCESS_TOKEN;
+```
+
+Replace `YOUR_ACCESS_TOKEN` with the actual token provided to you.
+
+## Request Headers
+
+The request to the `/husbando` endpoint should be a JSON object with the following headers:
+
+| Header          | Type   | Description                                            | Required |
+| --------------- | ------ | ------------------------------------------------------ | -------- |
+| `Authorization` | string | The unique identifier of the user sending the request. | True     |
+
+### Parameters
+
+The request parameters for the `/husbando?{parameter}={value}` endpoint.
+
+| Parameter | Type   | Description                                                                                                | Required |
+| --------- | ------ | ---------------------------------------------------------------------------------------------------------- | -------- |
+| `name`    | string | (Optional) The desired character name for the query. If not provided, a random husbando will be generated. | False    |
+| `anime`   | string | (Optional) The desired anime name for the query. If not provided, a random husbando will be selected.      | False    |
+
+### Example Request
+
+Here's example of how to make a request to the `/husbando` endpoint.
+
+<Tabs items={["JavaScript", "Python"]}>
+  <Tab>
+    ```js
+    import axios from "axios";
+
+    /*
+    Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
+    */
+    const url = "https://husbando.it/api/v4/husbando";
+    const data = async () => {
+      try {
+        const { data } = await axios.get(url, { headers: {
+          Authorization: "YOUR_ACCESS_TOKEN",
+        } });
+        return data;
+      } catch (err) {
+        throw new Error(err.message);
+      }
+    };
+
+    console.log(data);
+    ```
+
+  </Tab>
+  <Tab>
+    ```python
+    import requests
+
+    """
+    Replace "YOUR_ACCESS_TOKEN" with the token you got from the Kohai Bot and the endpoint.
+    """
+    url = "https://husbando.it/api/v4/husbando"
+    response = requests.get(url, headers={
+      "Authorization": "YOUR_ACCESS_TOKEN",
+    })
+    data = response.json()
+
+    print(data)
+    ```
+
+  </Tab>
+</Tabs>
+
+Remember to replace `YOUR_ACCESS_TOKEN` with your actual access token.
+
+## Responses
+
+The server will respond with an appropriate message based on the input provided. A successfully API request will respond
+with a JSON object containing the following information:
+
+- `_id`: The unique identifier of the husbando.
+- `name`: Information about the husbando's name.
+  - `first`: The first name of the husbando.
+  - `middle`: The middle name of the husbando (if available).
+  - `last`: The last name of the husbando (if available).
+  - `full`: The full name of the husbando.
+  - `native`: The native name of the husbando.
+  - `userPreferred`: The user's preferred name for the husbando.
+  - `alternative`: An array of alternative names for the husbando.
+  - `alternativeSpoiler`: An array of alternative names with potential spoilers.
+- `image`: Information about the husbando's image.
+  - `large`: URL to a large image of the husbando.
+- `favourites`: The number of users who have favorited the husbando.
+- `siteUrl`: URL to the husbando's page on AniList.
+- `description`: Description of the husbando (if available).
+- `age`: Age of the husbando (if available).
+- `gender`: Gender of the husbando.
+- `bloodType`: Blood type of the husbando (if available).
+- `dateOfBirth`: Date of birth of the husbando (if available).
+  - `year`: Year of birth.
+  - `month`: Month of birth.
+  - `day`: Day of birth.
+- `media`: Information about the media associated with the husbando.
+  - `nodes`: An array of media nodes.
+    - `id`: The unique identifier of the media.
+    - `idMal`: The MyAnimeList identifier of the media.
+    - `coverImage`: Information about the cover image of the media.
+      - `medium`: URL to a medium-sized cover image of the media.
+    - `bannerImage`: URL to a banner image of the media (if available).
+    - `title`: Information about the title of the media.
+      - `romaji`: Romaji representation of the title.
+      - `english`: English representation of the title (if available).
+      - `native`: Native representation of the title.
+      - `userPreferred`: User-preferred representation of the title.
+    - `synonyms`: An array of synonyms for the media title.
+    - `popularity`: Popularity score of the media.
+    - `type`: Type of the media (e.g., ANIME, MANGA).
+    - `format`: Format of the media (e.g., TV, MANGA).
+
+<Tabs items={["200 OK", "404 Not Found", "500 Internal Server Error"]}>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+    "status": 200,
+    "_id": 14881,
+    "name": {
+        "first": "Ura no Ojiichan",
+        "middle": null,
+        "last": null,
+        "full": "Ura no Ojiichan",
+        "native": "裏のおじいちゃん",
+        "userPreferred": "Ura no Ojiichan",
+        "alternative": [],
+        "alternativeSpoiler": []
+    },
+    "image": {
+        "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg"
+    },
+    "favourites": 0,
+    "siteUrl": "https://anilist.co/character/257439",
+    "description": null,
+    "age": null,
+    "gender": "Male",
+    "bloodType": null,
+    "dateOfBirth": {
+        "year": null,
+        "month": null,
+        "day": null
+    },
+    "media": {
+        "nodes": [
+            {
+                "id": 2406,
+                "idMal": 2406,
+                "coverImage": {
+                    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx2406-nP8NIct9Sci3.jpg"
+                },
+                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2406-ROqXxejQ5bH9.jpg",
+                "title": {
+                    "romaji": "Sazae-san",
+                    "english": null,
+                    "native": "サザエさん",
+                    "userPreferred": "Sazae-san"
+                },
+                "synonyms": [
+                    "Mrs. Sazae"
+                ],
+                "popularity": 1311,
+                "type": "ANIME",
+                "format": "TV"
+            },
+            {
+                "id": 43192,
+                "idMal": 13192,
+                "coverImage": {
+                    "medium": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/small/b43192-lBoylrcHjwWA.jpg"
+                },
+                "bannerImage": null,
+                "title": {
+                    "romaji": "Sazae-San",
+                    "english": "The Wonderful World of Sazae-San",
+                    "native": "サザエさん",
+                    "userPreferred": "Sazae-San"
+                },
+                "synonyms": [
+                    "Heisei no Sazae-san",
+                    "The Wonderful World of Sazae-san"
+                ],
+                "popularity": 195,
+                "type": "MANGA",
+                "format": "MANGA"
+            }
+        ]
+    }
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 404,
+      "message": {}
+    ```
+  </Tab>
+  <Tab>
+    **Content Type:** `application/json`
+    ```json copy=false
+      "status": 500,
+      "message": {}
+    ```
+  </Tab>
+</Tabs>
+
+This documentation should help you use [`axios`](https://www.npmjs.com/package/axios) for Node.js and [`requests`](https://pypi.org/project/requests/)
+for Python to interact with the `/husbando` endpoint.
+That's it! You are now ready to use the `/husbando` endpoint to retrieve information about your favorite husbandos. Happy coding!

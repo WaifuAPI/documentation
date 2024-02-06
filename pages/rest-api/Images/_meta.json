@@ -2,5 +2,9 @@
   "Waifu": {
     "title": "Waifu",
     "theme": { "collapsed": true }
+  },
+  "Husbando": {
+    "title": "Husbando",
+    "theme": { "collapsed": true }
   }
 }
