@@ -10,6 +10,12 @@
     "href": "https://raw.githubusercontent.com/WaifuAPI/Waifu.it/production/LICENCE.md",
     "newWindow": true
   },
+  "privacy-policy": {
+    "title": "Privacy Policy ↗",
+    "type": "page",
+    "href": "https://raw.githubusercontent.com/WaifuAPI/Waifu.it/production/PRIVACY_POLICY.md",
+    "newWindow": true
+  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
