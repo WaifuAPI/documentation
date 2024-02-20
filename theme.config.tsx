@@ -8,12 +8,15 @@ const config: DocsThemeConfig = {
   },
   faviconGlyph: "📝",
   banner: {
-    key: '3.0-release',
+    key: "3.0-release",
     text: (
-      <a href="https://github.com/WaifuAPI/Documentation/releases/tag/3.0.4" target="_blank">
+      <a
+        href="https://github.com/WaifuAPI/Documentation/releases/tag/3.0.4"
+        target="_blank"
+      >
         🎉 Documentation 3.0 is released. Read more →
       </a>
-    )
+    ),
   },
   logo: <span>Documentation</span>,
   navbar: {
@@ -58,17 +61,18 @@ const config: DocsThemeConfig = {
   chat: {
     link: "https://discord.gg/yyW389c",
   },
-  docsRepositoryBase: "https://github.com/WaifuAPI/Documentation/tree/production",
+  docsRepositoryBase:
+    "https://github.com/WaifuAPI/Documentation/tree/production",
   footer: {
     text: (
       <span>
-         AGPL-3.0 {new Date().getFullYear()} ©{' '}
+        AGPL-3.0 {new Date().getFullYear()} ©{" "}
         <a href="https://waifu.it" target="_blank">
           Waifu.it
         </a>
         .
       </span>
-    )
+    ),
   },
   head: function useHead() {
     const description =
@@ -76,9 +80,18 @@ const config: DocsThemeConfig = {
     return (
       <>
         <meta httpEquiv="Content-Language" content="en" />
-        <meta name="keywords" content="anime, waifu, anime facts, anime quotes, waifu api, waifu pictures, anime api, opensource api" />
+        <meta
+          name="keywords"
+          content="anime, waifu, anime facts, anime quotes, waifu api, waifu pictures, anime api, opensource api"
+        />
         <meta name="description" content={description} />
         <meta name="og:description" content={description} />
+        <meta name="google-adsense-account" content="ca-pub-1733730047414795" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1733730047414795"
+          crossOrigin="anonymous"
+        />
       </>
     );
   },
